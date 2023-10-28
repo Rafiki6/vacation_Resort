@@ -5,15 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OverNight Plan</title>
+    <link rel="stylesheet" href="./style/main.css">
+    <script src="./scripts/main.js"></script>
 </head>
 
 <body>
     <fieldset>
         <legend>Get a Price Quote</legend>
-        <label> Full Name <input type="text" id="UserName" value="name"></label><br>
+        <label> Full Name <input type="text" id="UserName" value="Full Name"></label><br>
         <label>Email <input type="email" id="UserEmail" value="email"></label><br>
-        <label> Check in <input type="date" id="checkedIn" value="name"></label><br>
+        <label> Check in <input type="date" id="checkedIn"></label><br>
         <label> Night <input type="number" id="night" value="0"></label><br>
+
         <label>
             Room Typer: <br>
             <label> <input type="radio" name="roomType" value="king">King;</label>
@@ -22,16 +25,20 @@
         </label>
         <br>
         <label> Adult <input type="number" id="adults" value="1"></label>
-        <br>
-        <label> Kids <input type="number" id ="kids" value ="1"></label><br>
+        <label> Kids <input type="number" id="kids" value="0"></label><br>
+
         <label>
             Discount <br>
             <label><input type="radio" name="discount" value="none">None</label>
             <label><input type="radio" name="discount" value="senior">Senior/AA</label>
             <label><input type="radio" name="discount" value="military">Military</label>
         </label>
-
+        <br>
+        <button type="submit" id="go">Calculate</button>
+        <br><br>
+        <pre id="output">result will display here.</pre>
     </fieldset>
+    
 </body>
 
 </html>
