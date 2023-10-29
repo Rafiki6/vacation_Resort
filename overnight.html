@@ -4,41 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OverNight Plan</title>
     <link rel="stylesheet" href="./style/main.css">
+    <title>OverNight Plan</title>
+    <script src="./scripts/calculate.js"></script>
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/nav.js"></script>
 </head>
 
 <body>
+    <header id ="header"></header>
+ 
     <fieldset>
         <legend>Get a Price Quote</legend>
-        <label> Full Name <input type="text" id="UserName" value="Full Name"></label><br>
-        <label>Email <input type="email" id="UserEmail" value="email"></label><br>
-        <label> Check in <input type="date" id="checkedIn"></label><br>
-        <label> Night <input type="number" id="night" value="0"></label><br>
+        <label>Name <input id="name" type="text"></label><br>
+        <label>Email <input id="email" type="email"></label><br>
+        <label>Check-in <input id="checkIn" type="date"></label><br>
+        <label>Nights <input id="nights" type="number"></label><br>
 
         <label>
             Room Typer: <br>
-            <label> <input type="radio" name="roomType" value="king">King;</label>
-            <label><input type="radio" name="roomType" value="queen">Queen</label>
-            <label><input type="radio" name="roomType" value="suit">2 Bedroom</label>
+            <label><input name="roomType" type="radio" value="queen" checked>Queen</label>
+            <label><input name="roomType" type="radio" value="king">King;</label>
+            <label><input name="roomType" type="radio" value="suite">2 Bedroom suit</label>
         </label>
         <br>
-        <label> Adult <input type="number" id="adults" value="1"></label>
-        <label> Kids <input type="number" id="kids" value="0"></label><br>
+        <label> Adults <input id="adults" type="number" value="1"></label>
+        <label> Kids <input id="children" type="number" value="0"></label><br>
 
         <label>
             Discount <br>
-            <label><input type="radio" name="discount" value="none">None</label>
-            <label><input type="radio" name="discount" value="senior">Senior/AA</label>
-            <label><input type="radio" name="discount" value="military">Military</label>
+            <label><input name="discounts" type="radio" value="none" checked>None</label>
+            <label><input name="discounts" type="radio" value="senior">Senior/AA</label>
+            <label><input name="discounts" type="radio" value="military">Military</label>
         </label>
         <br>
-        <button type="submit" id="go">Calculate</button>
-        <br><br>
-        <pre id="output">result will display here.</pre>
+        <button id="go">Calculate</button>
+
     </fieldset>
-    
+    <pre id="output">Result will display here.</pre>
 </body>
 
 </html>
